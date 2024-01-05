@@ -123,13 +123,15 @@ desert1 = Desert("Lava Cake", 7.00)
 desert2 = Desert("Brownie", 5.00)
 
 menu = Menu("Italian Restaurant", [appetizer1, appetizer2, entree1, entree2, desert1, desert2])
-menu.display_menu()
+print(menu.display_menu())
+menu.change_price("Chicken Alfredo", 22)
+
 
 cusutomer = Customer("Robert", "mafrobo@gmail.com")
 
 cusutomer.place_order(menu, ["Lava Cake", "Garlic Bread"])
 cusutomer.place_order(menu,["Brownie", "Lava Cake"])
 
-print(cusutomer.view_order_history())
-print(cusutomer.get_bill())
+# print(cusutomer.view_order_history())
+# print(cusutomer.get_bill())
 print(cusutomer.view_menu(menu))
